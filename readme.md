@@ -1,9 +1,13 @@
-# Simple Kafka Producer
+# Simple Kafka Producer (and Consumer without auto-commit) without forced Grammar
+
+## Pre-Requisites
+Local setup of docker, docker-compose
+Local setup of https://github.com/confluentinc/examples/tree/5.4.0-post/cp-all-in-one running
 
 ## Kafka Topic
 
 ```shell
-thetechcheck
+bta-test-kafka-topic
 ```
 
 ## Creating a Kafka Topic
@@ -11,7 +15,7 @@ thetechcheck
 ```cd``` into the Kafka directory, and run the following command to create a new topic:
 
 ```shell
-./bin/kafka-topics.sh --create --topic thetechcheck --replication-factor 1 --partitions 1 --zookeeper localhost:2181
+./bin/kafka-topics.sh --create --topic bta-test-kafka-topic --replication-factor 1 --partitions 1 --zookeeper localhost:2181
 ```
 
 ## Running the SpringBoot application
@@ -28,4 +32,4 @@ This will create a ```.jar``` file in the ```target``` directory, inside the pro
 java -jar target/<name_of_jar_file>.jar
 ```
 
-You should now be seeing the output in the terminal.
+You should now be seeing the output in the terminal
